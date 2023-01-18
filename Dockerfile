@@ -2,7 +2,9 @@
 FROM python:latest
 
 # Copy app code (.) to /usr/src/app in container image
-COPY HelloWorld.py /
+WORKDIR  HelloWorld.py /
+
+COPY . HelloWorld.py /
 
 # Set working directory context
 CMD ["python", "./HelloWorld.py"]
